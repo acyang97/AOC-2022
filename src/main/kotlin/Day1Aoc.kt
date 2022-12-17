@@ -36,3 +36,13 @@ fun main() {
     }
 }
 
+//try {
+//    val file = File("/Users/chunyang/Desktop/indeed/revision/AOC/src/main/kotlin/input-5.txt");
+//    BufferedReader(FileReader(file)).use { br ->
+//        var line: String?
+//        while (br.readLine().also { line = it } != null) {
+//        }
+//    }
+//} catch (e: IOException) {
+//    e.printStackTrace()
+//}
