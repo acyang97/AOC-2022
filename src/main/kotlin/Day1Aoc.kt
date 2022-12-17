@@ -6,7 +6,7 @@ import java.util.PriorityQueue
 
 // The function where code will start
 fun main() {
-    val file = File("/Users/chunyang/Desktop/indeed/revision/kotlin-youtube-crash-course/src/main/kotlin/input-1.txt");
+    val file = File("/Users/chunyang/Desktop/indeed/revision/AOC/src/main/kotlin/input-1.txt");
     var currentCalories = 0;
     var totalCalories = 0
     var pq = PriorityQueue {t1: Int, t2 : Int -> t2 - t1}

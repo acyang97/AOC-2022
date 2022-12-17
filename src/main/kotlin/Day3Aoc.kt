@@ -8,7 +8,7 @@ import java.io.IOException
  */
 fun main() {
     try {
-        val file = File("/Users/chunyang/Desktop/indeed/revision/kotlin-youtube-crash-course/src/main/kotlin/input-3.txt");
+        val file = File("/Users/chunyang/Desktop/indeed/revision/AOC/src/main/kotlin/input-3.txt");
         val listOfMatches = mutableListOf<Char>()
         BufferedReader(FileReader(file)).use { br ->
             var line: String?

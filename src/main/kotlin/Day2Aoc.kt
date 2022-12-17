@@ -34,7 +34,7 @@ fun main() {
     )
     var score: Int = 0;
     try {
-        val file = File("/Users/chunyang/Desktop/indeed/revision/kotlin-youtube-crash-course/src/main/kotlin/input-2.txt");
+        val file = File("/Users/chunyang/Desktop/indeed/revision/AOC/src/main/kotlin/input-2.txt");
         BufferedReader(FileReader(file)).use { br ->
             var line: String?
             while (br.readLine().also { line = it } != null) {
