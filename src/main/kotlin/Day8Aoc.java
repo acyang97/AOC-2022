@@ -8,7 +8,7 @@ public class Day8Aoc {
     static List<List<Integer>> input = new ArrayList<>();
     public static void main(String[] args) throws Exception {
         processInput();
-        day1();
+        day2();
     }
 
 
@@ -26,6 +26,61 @@ public class Day8Aoc {
             }
             input.add(ls);
         }
+    }
+
+    public static void day2() {
+        int width = input.get(0).size();
+        int height = input.size();
+        int[][] scores = new int[width][height];
+        // I need to update highest for row i and column j
+
+        for (int row = 1; row < height - 1; row++) {
+            for (int col = 1; col < width - 1; col++) {
+                int left = 0;
+                int right = 0;
+                int top = 0;
+                int bottom = 0;
+                int current = input.get(row).get(col);
+                // check left;
+                for (int k = col - 1; k >= 0; k--) {
+                    left++;
+                    if (input.get(row).get(k) >= current) {
+                        break;
+                    }
+                }
+
+                // check right;
+                for (int k = col + 1; k < width; k++) {
+                    right++;
+                    if (input.get(row).get(k) >= current) {
+                        break;
+                    }
+                }
+
+                // check top;
+                for (int k = row -1; k >= 0; k--) {
+                    top++;
+                    if (input.get(k).get(col) >= current) {
+                        break;
+                    }
+                }
+                // check bottom
+                for (int k = row + 1; k < height; k++) {
+                    bottom++;
+                    if (input.get(k).get(col) >= current) {
+                        break;
+                    }
+                }
+                scores[row][col] = left * right * bottom * top;
+            }
+        }
+        int currentMax = 0;
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                currentMax = Math.max(currentMax, scores[i][j]);
+            }
+        }
+        System.out.println("Answer is: " + currentMax);
     }
 
     public static void day1() {
