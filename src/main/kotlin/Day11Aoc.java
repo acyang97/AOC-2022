@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
-public class Day10Aoc {
+public class Day11Aoc {
     static List<Monkey> listOfMonkeys = new ArrayList<>();
 
     public static void main(String[] args) {
